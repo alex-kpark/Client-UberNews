@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Root from './client/Root'; //클라이언트를 나누어줄 Root를 import
 import './index.css';
-import App from './App';
+//import registerServiceWorker from './registerServiceWorker';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
+//가장 최상위로 렌더링해주는 페이지가 Root가 되어야 함
+ReactDOM.render(<Root />, document.getElementById('root'));
+//registerServiceWorker();
 serviceWorker.unregister();

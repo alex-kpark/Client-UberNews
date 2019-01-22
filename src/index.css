@@ -1,14 +1,15 @@
+/*배경 색상 설정 및 전체적인 box-sizing 설정*/
+
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:700');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: sans-serif;
+  box-sizing: border-box; /* 하위 엘리먼트들이 영향을 안받게 해줌*/
+  background: #f1f1f5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
