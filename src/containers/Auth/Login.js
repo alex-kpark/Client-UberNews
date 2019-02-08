@@ -31,7 +31,7 @@ class Login extends Component {
 
         this.setState({
             email: '',
-            passwords: ''
+            password: ''
         })
     }
 ;
@@ -53,7 +53,7 @@ class Login extends Component {
                                     }
                                 }/>
 
-                <AuthButton onClick={this._requestLogIn}>Log In</AuthButton>
+                <AuthButton onClick={this._requestLogIn} to='/home' >Log In</AuthButton>
                 <RightAlignedLink to="/auth/register">Not a member? Register!</RightAlignedLink>
             </AuthContent>
         );

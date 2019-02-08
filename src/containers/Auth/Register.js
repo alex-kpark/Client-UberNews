@@ -3,6 +3,8 @@
 import React, { Component } from 'react';
 import { AuthContent, InputWithLabel, AuthButton, RightAlignedLink } from 'components/Auth';
 import axios from 'axios';
+import { Route } from 'react-router-dom'
+import Home from 'pages/Home'
 
 class Register extends Component {
 
@@ -23,8 +25,8 @@ class Register extends Component {
             email: this.state.email,
             password: this.state.password
         })
-        .then( response => { console.log(response)} )
-        .catch( response => { console.log(response)} );
+        .then( response => { console.log(response) })
+        .catch( response => { console.log(response) });
 
         this.setState({
             username: '',
@@ -35,7 +37,7 @@ class Register extends Component {
 
     render() {
         return(
-            <AuthContent title="Sign Up Here">
+            <AuthContent title="Register">
                 <InputWithLabel label="Name" name="name" placeholder="What's your name?" value={this.state.username}
                                 onChange={(event)=>{
                                     this.setState({
@@ -55,8 +57,8 @@ class Register extends Component {
                                         password: event.target.value})
                                     }
                                 }/>
-                <AuthButton onClick={this._requestRegister}>Sign Up</AuthButton>
-                <RightAlignedLink to="/auth/login">Log In</RightAlignedLink>
+                <AuthButton to="/auth/login"onClick={this._requestRegister}>Sign Up</AuthButton>
+                <RightAlignedLink to="/auth/login">Move to Log In</RightAlignedLink>
             </AuthContent>
         );
     }

@@ -8,11 +8,11 @@ import { Link } from 'react-router-dom';
 //스타일링
 
 //화면의 중앙에 위치
+
 const Positioner = styled.div`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    width: 100%;
+    margin-top: 35%;
+    margin-left: 50%;
 `;
 
 //너비

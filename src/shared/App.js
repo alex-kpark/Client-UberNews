@@ -6,10 +6,11 @@ import HeaderContainer from 'containers/Base/HeaderContainer';
 
 class App extends Component {
     render(){
+        //헤더 넣을 거면 <HeaderContainer /> 포함
         return(
             <div>
-                <HeaderContainer />
                 <Route exact path="/" component={Home}/>
+                <Route exact path="/home" component={Home}/>
                 <Route path="/auth" component={Auth}/>
             </div>
         );
